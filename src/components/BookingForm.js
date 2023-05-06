@@ -14,12 +14,12 @@ const BookingForm = () => {
         const pincode = e.target[3].value;
         
         //  unique id is his/her mobile number
-        setFormSubmitted(true);
         if(userName!="" && mobile!="" && address!="" && pincode!=""){
             localStorage.setItem(`userName${mobile}`,userName)
             localStorage.setItem(`mobile${mobile}`,mobile)
             localStorage.setItem(`address${mobile}`,address)
             localStorage.setItem(`pincode${mobile}`,pincode)
+            setFormSubmitted(true);
         }
     }
 

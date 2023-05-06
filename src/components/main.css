@@ -1,0 +1,78 @@
+.background{
+    text-align: center;
+    padding: 20px 0;
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-behavior: smooth;
+    background:linear-gradient(to right,#708492, #f88e245f);
+}
+
+.movieBox{
+    display:inline-block;
+    background:linear-gradient(to left,#708492, #f88e245f);
+    padding: 10px 20px;
+    border-radius: 10px;
+    /* width: 25vw; */
+    box-shadow: 0px 0px 20px 4px #708492;
+    margin: 15px;
+}
+.background::-webkit-scrollbar{
+    display: none;
+}
+
+.movieImg{
+    width: 20vw;
+    height: 40vh;
+    margin: 0 20px;
+    border-radius: 10px;
+}
+.details{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: left;
+}
+.rating{
+    border-radius: 10px;
+    background-color: rgba(71, 64, 64, 0.699);
+    position: relative;
+    bottom: 24px;
+    margin: 0 20px;
+    color: white;
+    text-align: center;
+}
+.movieName{
+    float: left;
+    display: inline;
+    margin: 0 20px;
+    font-size: 1.5rem;
+}
+.genre{
+    float: left;
+    display: inline;
+    margin: 0 20px;
+    font-size: 1rem;
+}
+.language{
+    float: left;
+    display: inline;
+    margin: 0 20px;
+    font-size: 1rem;
+}
+.MoreInfoBtn{
+    background-color: #0B2D36;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin: 0;
+    border-radius: 5px;
+    margin: 15px 20px;
+    width: 20vw;
+}
+button:hover{
+    background:linear-gradient(to left,#708492, #f88e245f);
+    transition: 1s;
+    color: #0B2D36;
+}

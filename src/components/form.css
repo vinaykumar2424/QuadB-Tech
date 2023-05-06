@@ -1,12 +1,14 @@
-.form{
-    background:linear-gradient(to right,#708492, #f88e245f);
+.form {
+    background: linear-gradient(to right, #708492, #f88e245f);
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
-.form-div{
-    background: linear-gradient(to right,#708492, #f88e245f);
+
+.form-div {
+    background: linear-gradient(to right, #708492, #f88e245f);
     padding: 20px 60px;
     display: flex;
     flex-direction: column;
@@ -14,12 +16,14 @@
     border-radius: 10px;
     align-items: center;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-input{
+
+input {
     padding: 15px;
     border: none;
     border-bottom: 1px solid #f88e245f;
@@ -27,7 +31,8 @@ input{
     border-radius: 5px;
     outline: none;
 }
-.submit{
+
+.submit {
     background-color: #0B2D36;
     color: white;
     cursor: pointer;
@@ -36,20 +41,24 @@ input{
     border: none;
     border-radius: 5px;
 }
-.submit:hover{
-    background:linear-gradient(to left,#708492, #f88e245f);
+
+.submit:hover {
+    background: linear-gradient(to left, #708492, #f88e245f);
     transition: 1s;
     border: 1px solid #f88e245f;
     color: #0B2D36;
 }
 
 @media only screen and (max-width: 750px) {
-    input{
+    input {
         width: 300px;
     }
-  }
+}
 
+/* @media only screen and (max-width: 550px) {
+    
+} */
 
-.message{
+.message {
     display: none;
 }

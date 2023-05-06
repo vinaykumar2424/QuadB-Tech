@@ -1,7 +1,7 @@
 .moviepage{
     background:linear-gradient(to right,#708492, #f88e245f);
     /* background: url(https://source.unsplash.com/1600x900/?movie); */
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -76,3 +76,17 @@
     transition: 1s;
     color: #0B2D36;
 }
+@media only screen and (max-width: 550px) {
+    .movieimage{
+        width: 40vw;
+        height: 55vh;
+        border-radius: 10px;
+        box-shadow: 0 0 20px 0px black;
+    }
+    .buyticketnow{
+        width: 30vw;
+    }
+    .moviesummary{
+        font-size: 0.7rem;
+    }
+  }

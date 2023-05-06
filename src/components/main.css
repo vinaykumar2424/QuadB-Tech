@@ -76,3 +76,26 @@ button:hover{
     transition: 1s;
     color: #0B2D36;
 }
+
+@media only screen and (max-width: 825px) {
+    .movieImg{
+        width: 30vw;
+        height: 40vh;
+        margin: 0 20px;
+        border-radius: 10px;
+    }
+    .MoreInfoBtn{
+        width: 30vw;
+    }
+  }
+  @media only screen and (max-width: 550px) {
+    .movieImg{
+        width: 55vw;
+        height: 60vh;
+        margin: 0 20px;
+        border-radius: 10px;
+    }
+    .MoreInfoBtn{
+        width: 55vw;
+    }
+  }

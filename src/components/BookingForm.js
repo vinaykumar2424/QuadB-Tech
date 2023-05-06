@@ -1,22 +1,26 @@
 import { useLocation } from "react-router-dom";
 import "./form.css"
+import { useState } from "react";
 const BookingForm = () => {
 
     const location = useLocation();
     const propsData = location.state;
-
+    const [formSubmitted, setFormSubmitted] = useState(false);
     const handleSubmit = (e)=>{
         e.preventDefault();
         let userName = e.target[0].value;
         const mobile = e.target[1].value;
         const address = e.target[2].value;
         const pincode = e.target[3].value;
+        
         //  unique id is his/her mobile number
-        localStorage.setItem(`userName${mobile}`,userName)
-        localStorage.setItem(`mobile${mobile}`,mobile)
-        localStorage.setItem(`address${mobile}`,address)
-        localStorage.setItem(`pincode${mobile}`,pincode)
-        document.getElementsByClassName("message")[0].style.display = "block"
+        setFormSubmitted(true);
+        if(userName!="" && mobile!="" && address!="" && pincode!=""){
+            localStorage.setItem(`userName${mobile}`,userName)
+            localStorage.setItem(`mobile${mobile}`,mobile)
+            localStorage.setItem(`address${mobile}`,address)
+            localStorage.setItem(`pincode${mobile}`,pincode)
+        }
     }
 
     return (
@@ -30,7 +34,7 @@ const BookingForm = () => {
                     <input type="number" className="userPincode" placeholder="Enter your Pincode..." />
                     <button className="submit">Book Now</button>
                 </form>
-                <div className="message">Thanks! Your Ticket is Booked</div>
+                {formSubmitted && <div className="message" style={{ display: "block" }}>Thanks! Your Ticket is Booked</div>}
             </div>
         </div>
     )
